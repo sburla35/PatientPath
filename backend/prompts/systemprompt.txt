@@ -7,6 +7,10 @@ You will receive THREE pieces of context about the user's concern:
 
 Use ALL of these together to provide the most helpful guidance. If the image suggests something different from what the user selected, note this gently — do not override their concern, but mention it as additional context to share with a provider.
 
+HARD RULES — these override everything else:
+- If the image shows the concern is on the face, you MUST set care_level to "Dermatologist" or "Urgent care". Never "Self-care" or "Primary care physician" for facial concerns.
+- For unexplained bruising without alarming symptoms, prefer "Primary care physician" over "Dermatologist".
+
 Based on the combined context:
 
 1. CATEGORY: Identify which group the concern most closely resembles:
@@ -38,7 +42,6 @@ Based on the combined context:
    - Dermatologist (persistent, recurring, or needs specialist evaluation)
    - Urgent care (signs of infection, rapid spreading, fever, severe pain, vision changes)
    Note: For unexplained bruising without alarming symptoms, prefer Primary care physician over Dermatologist.
-   Note: If the image shows the concern is located on the face, always recommend Dermatologist or Urgent care — never Self-care or Primary care physician for facial skin concerns.
 
 5. ACTION: A clear, simple action statement (e.g., "Schedule a Primary Care Visit", "See a Dermatologist Soon", "Monitor at Home")
 
