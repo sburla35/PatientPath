@@ -8,6 +8,27 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children, subtitle }) => {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col items-center px-4 py-6 sm:py-10">
+      {/* Shutdown notice */}
+      <div className="w-full max-w-xl mb-4">
+        <div className="bg-red-50 border border-red-200 rounded-2xl px-4 py-3 flex items-start gap-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5"
+          >
+            <path
+              fillRule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <p className="text-red-800 text-sm font-medium leading-snug">
+            <strong>This tool is shutting down on June 12, 2026.</strong> It will no longer be available after that date. No user data was ever stored or retained by this application.
+          </p>
+        </div>
+      </div>
+
       {/* Non-diagnostic disclaimer banner — visible on every screen */}
       <div className="w-full max-w-xl mb-4">
         <div className="bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3 flex items-start gap-3">
